@@ -2,6 +2,7 @@
 
 call plug#begin('~/.vim/plugged')
 
+
 " Make sure you use single quotes
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
@@ -43,3 +44,17 @@ Plug 'tricktux/pomodoro.vim'
 call plug#end()
 
 colorscheme dracula
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set number
+
+let mapleader = ','
+
+" Telescope
+map      <C-p>      <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
